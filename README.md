@@ -2,5 +2,5 @@
 
 ## Steps to complete:
 1. Setup node version 20
-2.Clone my repo
-cd 117_linux
+2. .Clone my repo
+3. cd 117_linux
