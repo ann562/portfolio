@@ -11,12 +11,12 @@
     "type": "git",
     "url": "git+ssh://git@github.com/kaw393939/117_linux.git"
   },
-  "author": "Keith Williams",
+  "author": "Ann",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kaw393939/117_linux/issues"
+    "url": "https://github.com/ann562/Test/issues"
   },
-  "homepage": "https://github.com/kaw393939/117_linux#readme",
+  "homepage": "https://github.com/ann562/Test",
   "dependencies": {
     "express": "^4.21.0"
   },
@@ -25,6 +25,3 @@
   },
   "devDependencies": {}
 }
-
-
-
