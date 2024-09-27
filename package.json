@@ -1,18 +1,30 @@
 {
-  "name": "test",
-  "version": "1.0.0",
-  "description": "## Steps to complete: 1. Setup node version 20 2. .Clone my repo 3. cd 117_linux",
+  "name": "117_linux",
+  "version": "0.0.1",
+  "description": "Linux and GIT Survival Guide",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kaw393939/117_linux.git"
+  },
+  "author": "Keith Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaw393939/117_linux/issues"
+  },
+  "homepage": "https://github.com/kaw393939/117_linux#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
   "directories": {
     "doc": "docs"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
- 
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {}
 }
+
 
 
