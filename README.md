@@ -5,14 +5,12 @@
 2. .Clone my repo
 3. cd 117_linux
 
+## The History of the Internet
+
+[Who made HTML?](HTML.md)
 
 
-## Who Made HTML?
-- **Inventor**: Tim Berners-Lee
-- **Year**: 1989-1991
-- **Why**: Tim Berners-Lee created HTML (Hypertext Markup Language) as part of his vision for the World Wide Web, a way to allow researchers at CERN to share documents and research easily. HTML provides the structure for web pages, allowing for the inclusion of links (hyperlinks), text, images, and other content.
 
----
 
 ## Who Made CSS and Why?
 - **Inventor**: Håkon Wium Lie
