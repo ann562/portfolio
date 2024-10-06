@@ -1,3 +1,0 @@
-- **Inventor**: Tim Berners-Lee
-- **Year**: 1989-1991
-- **Why**: Tim Berners-Lee created HTML (Hypertext Markup Language) as part of his vision for the World Wide Web, a way to allow researchers at CERN to share documents and research easily. HTML provides the structure for web pages, allowing for the inclusion of links (hyperlinks), text, images, and other content.
