@@ -5,7 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+   table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+    th,
+    td {
+      border: 1px solid #ffffff;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #b58181;
+    }
+    caption {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    th:hover,
+    td:hover {
+      background-color: #e29b9b;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+  .red {
+    color: rgb(0, 179, 255);
+  }
+
+  .bold-100 {
+    font-weight: 100;
+  }
+
+  html {
+    background-color: rgb(244, 218, 227);
+  }
+  .border {
+    border: #000 10px;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 50px;
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+  }
+
+  </style>
+
+      </style>
   </head>
   <body>
     <h1>History of the Internet</h1>
@@ -15,7 +73,53 @@
         <li><a href="web1.html">Web 1.0</a></li>
         <li><a href="web2.html">Web 2.0</a></li>
     </ul>
+    <table role="table">
+      <!-- Using `role="table"` for screen readers to announce the table properly -->
+      <caption>JavaScript Engines of Major Web Browsers (Last 5 Years)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Browser</th>
+          <!-- The `scope="col"` attribute helps screen readers identify that this is a header for the following column. -->
+          <th scope="col">JavaScript Engine</th>
+          <th scope="col">Current Version (as of 2023)</th>
+          <th scope="col">Rendering Engine</th>
+          <th scope="col">First Released</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Chrome</td>
+          <td>V8</td>
+          <td>117 (Sept 2023)</td>
+          <td>Blink</td>
+          <td>2008</td>
+        </tr>
+        <tr>
+          <td>Mozilla Firefox</td>
+          <td>SpiderMonkey</td>
+          <td>118</td>
+          <td>Gecko</td>
+          <td>2004</td>
+        </tr>
+        <tr>
+          <td>Safari</td>
+          <td>JavaScriptCore</td>
+          <td>17</td>
+          <td>WebKit</td>
+          <td>2003</td>
+        </tr>
+        <tr>
+          <td>Microsoft Edge</td>
+          <td>V8</td>
+          <td>117</td>
+          <td>Blink</td>
+          <td>2015</td>
+        </tr>
+      </tbody>
+    </table>
+  
     
     <script src="index.js"></script>
+
   </body>
 </html>
