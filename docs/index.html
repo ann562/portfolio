@@ -1,34 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="css/main.css">
-    <style>
-   table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-    th,
-    td {
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>History of the Internet and Web Technologies</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* Reset and styling for body */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      background-color: rgb(244, 218, 227);
+      font-size: 17px;
+      line-height: 29px;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+                   Helvetica, Arial, "Lucida Grande", sans-serif;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    /* Flex container for two-column layout */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Golden ratio columns */
+    .main-content {
+      flex: 1.618; /* Wide column */
+      padding-right: 20px;
+    }
+
+    .sidebar {
+      flex: 1; /* Narrow column */
+      background-color: #fff;
+      border-left: 2px solid #ddd;
+      padding-left: 20px;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
       border: 1px solid #ffffff;
       padding: 10px;
       text-align: left;
     }
+
     th {
       background-color: #b58181;
     }
+
+    th:hover, td:hover {
+      background-color: #e29b9b;
+    }
+
     caption {
       font-size: 1.5em;
       margin-bottom: 10px;
     }
-    th:hover,
-    td:hover {
-      background-color: #e29b9b;
-    }
+
+    /* Utility class for screen readers */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -40,91 +84,111 @@
       border: 0;
     }
 
-  .red {
-    color: rgb(0, 179, 255);
-  }
+    /* Styling for sidebar links */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-  .bold-100 {
-    font-weight: 100;
-  }
+    ul li a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: rgb(0, 179, 255);
+      display: block;
+      padding: 10px 0;
+    }
 
-  html {
-    background-color: rgb(244, 218, 227);
-    font-size: 17px;
-    line-height:29px;
-    font-family: "HeveticaNeue-Light","Helvetica Neue Light","Hevetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    ul li a:hover {
+      font-weight: bold;
+      color: rgb(0, 120, 200);
+    }
 
-  }
-  .border {
-    border: #000 10px;
-    border-style: solid;
-    border-width: 1px;
-    margin-left: 50px;
-    padding: 20px;
-    position: fixed;
-    top: 0px;
-  }
+    /* Responsive behavior: Stack columns vertically on small screens */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
 
+      .main-content, .sidebar {
+        width: 100%;
+        padding: 0;
+      }
+    }
   </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Main Content (Left Column) -->
+    <div class="main-content">
+      <h1>History of the Internet</h1>
+      <table role="table">
+        <caption>History of the Internet and Web Technologies</caption>
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pre-Internet Development</td>
+            <td>1960s-1980s: Research on packet switching, ARPANET, and early network protocols laid the groundwork for the Internet.</td>
+          </tr>
+          <tr>
+            <td>Creation of the World Wide Web</td>
+            <td>1989-1991: Tim Berners-Lee developed HTML and HTTP, launching the first website in 1991, making the web accessible.</td>
+          </tr>
+          <tr>
+            <td>Early Search Engines</td>
+            <td>1995-1998: Search engines like AltaVista and HotBot helped users navigate the expanding web.</td>
+          </tr>
+          <tr>
+            <td>Rise of JavaScript</td>
+            <td>1995: Brendan Eich created JavaScript, enabling interactivity on web pages, later standardized as ECMAScript.</td>
+          </tr>
+          <tr>
+            <td>Advent of CSS</td>
+            <td>1996: Håkon Wium Lie proposed CSS, allowing separation of content and presentation in web design.</td>
+          </tr>
+          <tr>
+            <td>Web 1.0 Era</td>
+            <td>1990s: Static websites characterized this era, where content was primarily read-only, with limited user interaction.</td>
+          </tr>
+          <tr>
+            <td>Web 2.0 Emergence</td>
+            <td>2000s: Shift to interactive and social web applications, user-generated content, and collaboration platforms.</td>
+          </tr>
+          <tr>
+            <td>Google Search (PageRank)</td>
+            <td>1998: Larry Page and Sergey Brin launched Google Search with PageRank, revolutionizing search engine algorithms.</td>
+          </tr>
+          <tr>
+            <td>REST Architecture</td>
+            <td>2000: Roy Fielding introduced REST, standardizing web services and enabling stateless communication over HTTP.</td>
+          </tr>
+          <tr>
+            <td>Python's Rise</td>
+            <td>1991: Guido van Rossum released Python, a versatile language that became popular for web development and data science.</td>
+          </tr>
+          <tr>
+            <td>Git Development</td>
+            <td>2005: Linus Torvalds created Git, improving version control for software development and enabling collaboration.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-      </style>
-  </head>
-  <body>
-    <h1>History of the Internet</h1>
-   
-    <ul>
+    <!-- Sidebar Links (Right Column) -->
+    <div class="sidebar">
+      <ul>
         <li><a href="preinternet.html">Pre-Internet</a></li>
         <li><a href="earlyinternet.html">Early Internet</a></li>
         <li><a href="web1.html">Web 1.0</a></li>
         <li><a href="web2.html">Web 2.0</a></li>
-    </ul>
-    <table role="table">
-      <!-- Using `role="table"` for screen readers to announce the table properly -->
-      <caption>JavaScript Engines of Major Web Browsers (Last 5 Years)</caption>
-      <thead>
-        <tr>
-          <th scope="col">Browser</th>
-          <!-- The `scope="col"` attribute helps screen readers identify that this is a header for the following column. -->
-          <th scope="col">JavaScript Engine</th>
-          <th scope="col">Current Version (as of 2023)</th>
-          <th scope="col">Rendering Engine</th>
-          <th scope="col">First Released</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Google Chrome</td>
-          <td>V8</td>
-          <td>117 (Sept 2023)</td>
-          <td>Blink</td>
-          <td>2008</td>
-        </tr>
-        <tr>
-          <td>Mozilla Firefox</td>
-          <td>SpiderMonkey</td>
-          <td>118</td>
-          <td>Gecko</td>
-          <td>2004</td>
-        </tr>
-        <tr>
-          <td>Safari</td>
-          <td>JavaScriptCore</td>
-          <td>17</td>
-          <td>WebKit</td>
-          <td>2003</td>
-        </tr>
-        <tr>
-          <td>Microsoft Edge</td>
-          <td>V8</td>
-          <td>117</td>
-          <td>Blink</td>
-          <td>2015</td>
-        </tr>
-      </tbody>
-    </table>
-  
-    
-    <script src="index.js"></script>
+      </ul>
+    </div>
+  </div>
 
-  </body>
+  <script src="index.js"></script>
+</body>
 </html>
