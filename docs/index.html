@@ -46,45 +46,22 @@
       padding-left: 20px;
     }
 
-    /* Table styling */
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    /* Styling for main content headings */
+    h2 {
       margin-top: 20px;
+      color: #ffffff;
     }
 
-    th, td {
-      border: 1px solid #ffffff;
-      padding: 10px;
-      text-align: left;
+    p {
+      margin-bottom: 20px;
     }
 
-    th {
-      background-color: #b58181;
-    }
-
-    th:hover, td:hover {
-      background-color: #e29b9b;
-    }
-
-    caption {
-      font-size: 1.5em;
+    /* Styling for sidebar */
+    .sidebar h2 {
       margin-bottom: 10px;
+      color: #433131;
     }
 
-    /* Utility class for screen readers */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-
-    /* Styling for sidebar links */
     ul {
       list-style-type: none;
       padding: 0;
@@ -118,73 +95,53 @@
 </head>
 <body>
   <div class="container">
-    <!-- Main Content (Left Column) -->
+    <!-- Main Content (Article) -->
     <div class="main-content">
       <h1>History of the Internet</h1>
-      <table role="table">
-        <caption>History of the Internet and Web Technologies</caption>
-        <thead>
-          <tr>
-            <th scope="col">Event</th>
-            <th scope="col">Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Pre-Internet Development</td>
-            <td>1960s-1980s: Research on packet switching, ARPANET, and early network protocols laid the groundwork for the Internet.</td>
-          </tr>
-          <tr>
-            <td>Creation of the World Wide Web</td>
-            <td>1989-1991: Tim Berners-Lee developed HTML and HTTP, launching the first website in 1991, making the web accessible.</td>
-          </tr>
-          <tr>
-            <td>Early Search Engines</td>
-            <td>1995-1998: Search engines like AltaVista and HotBot helped users navigate the expanding web.</td>
-          </tr>
-          <tr>
-            <td>Rise of JavaScript</td>
-            <td>1995: Brendan Eich created JavaScript, enabling interactivity on web pages, later standardized as ECMAScript.</td>
-          </tr>
-          <tr>
-            <td>Advent of CSS</td>
-            <td>1996: Håkon Wium Lie proposed CSS, allowing separation of content and presentation in web design.</td>
-          </tr>
-          <tr>
-            <td>Web 1.0 Era</td>
-            <td>1990s: Static websites characterized this era, where content was primarily read-only, with limited user interaction.</td>
-          </tr>
-          <tr>
-            <td>Web 2.0 Emergence</td>
-            <td>2000s: Shift to interactive and social web applications, user-generated content, and collaboration platforms.</td>
-          </tr>
-          <tr>
-            <td>Google Search (PageRank)</td>
-            <td>1998: Larry Page and Sergey Brin launched Google Search with PageRank, revolutionizing search engine algorithms.</td>
-          </tr>
-          <tr>
-            <td>REST Architecture</td>
-            <td>2000: Roy Fielding introduced REST, standardizing web services and enabling stateless communication over HTTP.</td>
-          </tr>
-          <tr>
-            <td>Python's Rise</td>
-            <td>1991: Guido van Rossum released Python, a versatile language that became popular for web development and data science.</td>
-          </tr>
-          <tr>
-            <td>Git Development</td>
-            <td>2005: Linus Torvalds created Git, improving version control for software development and enabling collaboration.</td>
-          </tr>
-        </tbody>
-      </table>
+
+      <h2>Pre-Internet Development</h2>
+      <p>1960s-1980s: Research on packet switching, ARPANET, and early network protocols laid the groundwork for the Internet.</p>
+
+      <h2>Creation of the World Wide Web</h2>
+      <p>1989-1991: Tim Berners-Lee developed HTML and HTTP, launching the first website in 1991, making the web accessible.</p>
+
+      <h2>Early Search Engines</h2>
+      <p>1995-1998: Search engines like AltaVista and HotBot helped users navigate the expanding web.</p>
+
+      <h2>Rise of JavaScript</h2>
+      <p>1995: Brendan Eich created JavaScript, enabling interactivity on web pages, later standardized as ECMAScript.</p>
+
+      <h2>Advent of CSS</h2>
+      <p>1996: Håkon Wium Lie proposed CSS, allowing separation of content and presentation in web design.</p>
+
+      <h2>Web 1.0 Era</h2>
+      <p>1990s: Static websites characterized this era, where content was primarily read-only, with limited user interaction.</p>
+
+      <h2>Web 2.0 Emergence</h2>
+      <p>2000s: Shift to interactive and social web applications, user-generated content, and collaboration platforms.</p>
+
+      <h2>Google Search (PageRank)</h2>
+      <p>1998: Larry Page and Sergey Brin launched Google Search with PageRank, revolutionizing search engine algorithms.</p>
+
+      <h2>REST Architecture</h2>
+      <p>2000: Roy Fielding introduced REST, standardizing web services and enabling stateless communication over HTTP.</p>
+
+      <h2>Python's Rise</h2>
+      <p>1991: Guido van Rossum released Python, a versatile language that became popular for web development and data science.</p>
+
+      <h2>Git Development</h2>
+      <p>2005: Linus Torvalds created Git, improving version control for software development and enabling collaboration.</p>
     </div>
 
-    <!-- Sidebar Links (Right Column) -->
+    <!-- Sidebar (Table of Contents) -->
     <div class="sidebar">
+      <h2>Table of Contents</h2>
       <ul>
-        <li><a href="preinternet.html">Pre-Internet</a></li>
+        <li><a href="preinternet.html">Pre-Internet Development</a></li>
         <li><a href="earlyinternet.html">Early Internet</a></li>
-        <li><a href="web1.html">Web 1.0</a></li>
-        <li><a href="web2.html">Web 2.0</a></li>
+        <li><a href="web1.html">Web 1.0 Era</a></li>
+        <li><a href="web2.html">Web 2.0 Emergence</a></li>
+      
       </ul>
     </div>
   </div>
