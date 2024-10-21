@@ -6,99 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>History of the Internet and Web Technologies</title>
   <link rel="stylesheet" href="css/main.css">
-  <style>
-    /* Reset and styling for body */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      background-color: rgb(244, 218, 227);
-      font-size: 17px;
-      line-height: 29px;
-      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
-                   Helvetica, Arial, "Lucida Grande", sans-serif;
-    }
-
-    body {
-      padding: 20px;
-    }
-
-    /* Flex container for two-column layout */
-    .container {
-      display: flex;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* Golden ratio columns */
-    .main-content {
-      flex: 1.618; /* Wide column */
-      padding-right: 20px;
-    }
-
-    .sidebar {
-      flex: 1; /* Narrow column */
-      background-color: #fff;
-      border-left: 2px solid #ddd;
-      padding-left: 20px;
-    }
-
-    /* Styling for main content headings */
-    h2 {
-      margin-top: 20px;
-      color: #ffffff;
-    }
-
-    p {
-      margin-bottom: 20px;
-    }
-
-    /* Styling for sidebar */
-    .sidebar h2 {
-      margin-bottom: 10px;
-      color: #433131;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    ul li a {
-      text-decoration: none;
-      font-size: 1.2rem;
-      color: rgb(0, 179, 255);
-      display: block;
-      padding: 10px 0;
-    }
-
-    ul li a:hover {
-      font-weight: bold;
-      color: rgb(0, 120, 200);
-    }
-
-    /* Responsive behavior: Stack columns vertically on small screens */
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column-reverse;
-      }
-
-      .main-content, .sidebar {
-        width: 100%;
-        padding: 0;
-      }
-    }
-  </style>
+  <!-- Include Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
   <div class="container">
-    <!-- Main Content (Article) -->
     <div class="main-content">
       <h1>History of the Internet</h1>
-
       <h2>Pre-Internet Development</h2>
       <p>1960s-1980s: Research on packet switching, ARPANET, and early network protocols laid the groundwork for the Internet.</p>
 
@@ -141,7 +72,6 @@
         <li><a href="earlyinternet.html">Early Internet</a></li>
         <li><a href="web1.html">Web 1.0 Era</a></li>
         <li><a href="web2.html">Web 2.0 Emergence</a></li>
-      
       </ul>
     </div>
   </div>
