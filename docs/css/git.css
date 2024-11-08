@@ -1,131 +1,168 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
   }
-  
-  body {
-    background: #f9f9f9;
-    color: #333;
+  to {
+      opacity: 1;
   }
-  
-  nav {
-    background: linear-gradient(to right, #66d1f2, #8ec6d7);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fff;
-  }
-  
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+  opacity: 0; /* Start invisible for the animation */
+}
+
+/* Staggered Fade-In Timing */
+.fade-in:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.fade-in:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.fade-in:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.fade-in:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Main Content Section */
+.content-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* Text Content aligned in F-pattern */
+.text-content {
+  max-width: 60%;
+}
+
+.text-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.text-content p,
+.text-content ul {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Right-Side Image at Top Right for F-pattern Layout */
+.right-image {
+  position: absolute;
+  top: 120px;
+  right: 40px;
+  width: 450px; /* Adjusted for a larger display */
+}
+
+.right-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Checklist styling similar to Linux checklist */
+.checklist {
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  width: 250px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 400px;
+  cursor: grab;
+}
+
+.checklist h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #005f73;
+}
+
+.checklist ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklist-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.toggle {
+  cursor: pointer;
+  font-weight: bold;
+  color: #00a693;
+  transition: color 0.3s;
+}
+
+.toggle.checked {
+  color: #00a693; /* Checked color */
+}
+
+/* Additional Spacing for F-Pattern Layout */
+.content-section h2 {
+  margin-top: 30px;
+  color: #005f73;
+  font-size: 24px;
+}
+
+/* Responsive Adjustments for screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+  /* Stack navigation links vertically for mobile */
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
   }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-  
-  .nav-links a.active {
-    border-bottom: 2px solid #fff;
-    padding-bottom: 4px;
-  }
-  
+
+  /* Stack text content and image vertically */
   .content-section {
-    padding: 3rem;
-    background-color: #fffbea; /* Soft yellow background tone */
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
   }
-  
-  .content-wrapper {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-  }
-  
+
   .text-content {
-    flex: 2;
+      max-width: 100%;
+      margin: 0;
   }
-  
-  .image-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  /* Resize and reposition image for mobile */
+  .right-image {
+      position: static;
+      width: 80%;
+      margin-top: 20px;
   }
-  
-  .image-content img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .checklist-container {
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-    width: 220px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-  }
-  
-  .checklist-container h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  
+
+  /* Adjust checklist size and position */
   .checklist {
-    max-height: 150px;
-    overflow-y: auto;
-    padding-right: 8px;
-    position: relative;
+      position: static;
+      width: 100%;
+      max-height: none;
+      margin-top: 20px;
+      cursor: auto;
   }
-  
-  .checklist ul {
-    list-style-type: none;
-  }
-  
-  .checklist li {
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .checklist::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-    pointer-events: none;
-  }
-  
-  footer {
-    background-color: #002b5c; /* Dark blue footer */
-    padding: 1.5rem;
-    text-align: center;
-    color: #fff;
-  }
-  
-  footer p {
-    font-size: 0.875rem;
-  }
+}
+
+
+
+
   
   
   
