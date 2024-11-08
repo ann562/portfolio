@@ -1,85 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>History of the Internet and Web Technologies</title>
-
-  <!-- Include CSS -->
-  <link rel="stylesheet" href="css/main.css">
-
-  <!-- Include Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Survival Guide</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <header>
-    <nav class="navbar">
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-      </ul>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">SAGE</div>
+        <ul class="nav-links">
+            <li><a href="git.html">GIT</a></li>
+            <li><a href="linux.html">LINUX</a></li>
+            <li><a href="web-technologies.html">WEB TECHNOLOGIES</a></li>
+            <li><a href="tips.html">TIPS</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <div class="container">
-    <div class="main-content">
-      <h1>History of the Internet</h1>
-      <h2>Pre-Internet Development</h2>
-      <p>1960s-1980s: Research on packet switching, ARPANET, and early network protocols laid the groundwork for the Internet.</p>
+    <!-- Z-Pattern Content -->
+    <section class="intro-section">
+        <!-- Faded Image Insert as an HTML img element -->
+        <img src="images/github-overview 1.png" alt="Intro Background" class="faded-image intro-image">
 
-      <h2>Creation of the World Wide Web</h2>
-      <p>1989-1991: Tim Berners-Lee developed HTML and HTTP, launching the first website in 1991, making the web accessible.</p>
+        <div class="text-content">
+            <h1><span class="highlight">The Student</span> Tech Survival Guide</h1>
+            <p>Discover the foundational history of Git, Linux, and Web Technologies, and equip yourself with valuable tips and cheat sheets to enhance your understanding and expertise. Empower your journey with wisdom and practical insights to navigate these essential tools with confidence.</p>
 
-      <h2>Early Search Engines</h2>
-      <p>1995-1998: Search engines like AltaVista and HotBot helped users navigate the expanding web.</p>
+            <!-- Email Signup Form -->
+            <form class="email-signup">
+                <input type="email" placeholder="EMAIL">
+                <button type="submit">SIGN UP</button>
+            </form>
+        </div>
+    </section>
 
-      <h2>Rise of JavaScript</h2>
-      <p>1995: Brendan Eich created JavaScript, enabling interactivity on web pages, later standardized as ECMAScript.</p>
+    <section class="testimonials-section">
+        <!-- Faded Image Insert as an HTML img element -->
+        <img src="path/to/your-testimonials-image.jpg" alt="Testimonials Background" class="faded-image testimonials-image">
 
-      <h2>Advent of CSS</h2>
-      <p>1996: Håkon Wium Lie proposed CSS, allowing separation of content and presentation in web design.</p>
-
-      <h2>Web 1.0 Era</h2>
-      <p>1990s: Static websites characterized this era, where content was primarily read-only, with limited user interaction.</p>
-
-      <h2>Web 2.0 Emergence</h2>
-      <p>2000s: Shift to interactive and social web applications, user-generated content, and collaboration platforms.</p>
-
-      <h2>Google Search (PageRank)</h2>
-      <p>1998: Larry Page and Sergey Brin launched Google Search with PageRank, revolutionizing search engine algorithms.</p>
-
-      <h2>REST Architecture</h2>
-      <p>2000: Roy Fielding introduced REST, standardizing web services and enabling stateless communication over HTTP.</p>
-
-      <h2>Python's Rise</h2>
-      <p>1991: Guido van Rossum released Python, a versatile language that became popular for web development and data science.</p>
-
-      <h2>Git Development</h2>
-      <p>2005: Linus Torvalds created Git, improving version control for software development and enabling collaboration.</p>
-    </div>
-
-    <!-- Sidebar (Table of Contents) -->
-    <div class="sidebar">
-      <h2>Table of Contents</h2>
-      <ul>
-        <li><a href="preinternet.html">Pre-Internet Development</a></li>
-        <li><a href="earlyinternet.html">Early Internet</a></li>
-        <li><a href="web1.html">Web 1.0 Era</a></li>
-        <li><a href="web2.html">Web 2.0 Emergence</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <script src="index.js"></script>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="path/to/image1.jpg" alt="Evan Olsen">
+                <h3>EVAN OLSEN</h3>
+                <p>"This website is a goldmine for anyone looking to dive deep into the history of the internet and tech basics! The layout is clear and easy to follow, and I love how each section builds up my understanding step-by-step."</p>
+            </div>
+            <div class="testimonial">
+                <img src="path/to/image2.jpg" alt="Alice Tate">
+                <h3>ALICE TATE</h3>
+                <p>"I stumbled upon this site while looking for a simple guide on Git and ended up spending hours exploring. The design feels trustworthy and organized, and the checklist format makes it so easy to track my progress."</p>
+            </div>
+            <div class="testimonial">
+                <img src="path/to/image3.jpg" alt="Lee Philips">
+                <h3>LEE PHILIPS</h3>
+                <p>"As someone new to tech, I find most resources too overwhelming. This site, though, strikes the perfect balance between simplicity and depth. The lessons are well-structured, and the site design is calming and professional."</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
+
+
+
+
+
 

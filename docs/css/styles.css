@@ -1,0 +1,173 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Outfit', sans-serif;
+  color: #000;
+  background-color: #fffbe0; /* Yellow-tinted background */
+  overflow-y: scroll; /* Makes the page scrollable */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #005f73; /* Exact blue color from Figma */
+  color: #ffffff;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Z-Pattern Layout */
+.intro-section, .testimonials-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  position: relative;
+  background-color: #fffbe0; /* Yellow-tinted background */
+}
+
+/* Faded Image Inserts */
+.faded-image {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.3; /* Increased opacity for clearer visibility */
+  filter: blur(1.5px); /* Reduced blur for more clarity */
+}
+
+.intro-image {
+  right: 0;
+  top: 50px;
+  width: 400px;
+  height: 400px;
+}
+
+.testimonials-image {
+  left: 0;
+  bottom: 50px;
+  width: 400px;
+  height: 400px;
+}
+
+/* Intro Section */
+.intro-section {
+  justify-content: space-between;
+}
+
+.intro-section .text-content {
+  max-width: 600px;
+  z-index: 1; /* Ensures text is above background image */
+}
+
+.intro-section h1 {
+  font-size: 36px;
+}
+
+.intro-section .highlight {
+  font-style: italic;
+  color: #00a693;
+}
+
+.intro-section p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.email-signup {
+  display: flex;
+  margin-top: 20px;
+}
+
+.email-signup input[type="email"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.email-signup button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: #00a693;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  justify-content: space-around;
+  background-color: #f9f9f9;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 1;
+}
+
+.testimonial {
+  max-width: 200px;
+  text-align: center;
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimonial p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
