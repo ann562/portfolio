@@ -1,4 +1,4 @@
-[Website-link](https://ann562.github.io/Test/tips.html)
+[Website-link](https://ann562.github.io/Test/index.html)
 
 # Student Survival Guide
 
