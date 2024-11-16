@@ -82,21 +82,30 @@ nav .logo {
   color: #00a693;
 }
 
-/* Popcorn Logos */
+/* Popcorn Logos Section */
 .popcorn-logos {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px; /* Adds spacing between each item */
   padding: 50px 0;
   margin-top: 70px; /* Adds spacing below the navbar */
 }
 
+.popcorn-item {
+  text-align: center; /* Centers the text and images */
+}
+
+.popcorn-item a {
+  display: inline-block; /* Ensures the clickable area wraps the logo */
+  text-decoration: none; /* Removes underline from links */
+}
+
 .popcorn-icon {
-  width: 100px; /* Increased width */
-  height: 100px; /* Increased height */
+  width: 100px; /* Logo width */
+  height: 100px; /* Logo height */
   opacity: 0;
-  transform: translateY(100px) scale(0);
+  transform: translateY(100px) scale(0); /* Start off-screen and shrunk */
 }
 
 .popcorn-icon.popcorn-active {
@@ -106,20 +115,45 @@ nav .logo {
 @keyframes popcorn-animation {
   0% {
     opacity: 0;
-    transform: translateY(100px) scale(0);
+    transform: translateY(100px) scale(0); /* Off-screen and invisible */
   }
   50% {
     opacity: 1;
-    transform: translateY(0) scale(1.5); /* Increased scaling effect */
+    transform: translateY(0) scale(1.5); /* Pop up and expand */
   }
   75% {
-    transform: translateY(0) scale(1); /* Back to original size */
+    transform: translateY(0) scale(1); /* Return to normal size */
   }
   100% {
-    opacity: 0;
-    transform: translateY(-50px) scale(0.5); /* Shrinking upward */
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Stay visible at normal size */
   }
 }
+
+.popcorn-label {
+  margin-top: 10px; /* Adds space between the image and text */
+  font-size: 16px; /* Text size */
+  font-weight: 500; /* Medium weight for readability */
+  color: #333; /* Neutral color */
+  opacity: 0; /* Start as invisible */
+  animation: fade-in 1s ease-out forwards;
+  animation-delay: 2s; /* Matches popcorn animation duration */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; /* Fully invisible */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.popcorn-icon:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+  transition: transform 0.3s ease;
+}
+
 
 /* Z-Pattern Section */
 .z-pattern {
