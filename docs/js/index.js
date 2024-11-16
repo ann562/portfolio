@@ -1,9 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector(".testimonials-slider");
-    const testimonials = document.querySelectorAll(".testimonial");
+// Wait for the DOM to load
+window.addEventListener('DOMContentLoaded', () => {
+    const icons = document.querySelectorAll('.popcorn-icon');
 
-    testimonials.forEach((testimonial) => {
-        const clone = testimonial.cloneNode(true);
-        slider.appendChild(clone);
+    icons.forEach((icon, index) => {
+        // Add a delay for each icon
+        setTimeout(() => {
+            icon.classList.add('popcorn-active');
+        }, index * 200); // Delay by 200ms for each icon
     });
 });
+
