@@ -1,27 +1,24 @@
 {
-  "name": "117_linux",
-  "version": "0.0.1",
-  "description": "Linux and GIT Survival Guide",
-  "main": "index.js",
+  "name": "jsintro",
+  "version": "1.0.0",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/kaw393939/117_linux.git"
-  },
-  "author": "Ann",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ann562/Test/issues"
-  },
-  "homepage": "https://github.com/ann562/Test",
-  "dependencies": {
-    "express": "^4.21.0"
-  },
-  "directories": {
-    "doc": "docs"
-  },
-  "devDependencies": {}
+  "test": "playwright test",
+  "test:headed": "playwright test --headed",
+  "test:debug": "playwright test --debug",
+  "start": "node app.js"
 }
+,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2"
+  }
+}
+
