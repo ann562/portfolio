@@ -30,7 +30,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay */
+  background: rgba(255, 255, 255, 0.4); /* Semi-transparent overlay */
   z-index: 1;
 }
 
@@ -239,4 +239,133 @@ nav .logo {
 /* Body Bottom Padding for Popcorn Section */
 body {
   padding-bottom: 150px;
+}
+/* Testimonials Section */
+.testimonials {
+  position: relative; /* To position the overlay correctly */
+  padding: 50px 5%;
+  background-image: url('/images/testim.png'); /* Add the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff; /* Ensure text contrasts with the overlay */
+}
+
+.testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); /* White transparent overlay */
+  z-index: 1; /* Place the overlay behind the text */
+}
+
+.testimonials h2,
+.testimonials-wrapper {
+  position: relative; /* Ensure text and content appear above the overlay */
+  z-index: 2;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333; /* Text color adjusted for visibility */
+}
+
+.testimonials-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.testimonials-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  max-width: 800px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.testimonial-item {
+  flex: 0 0 300px;
+  background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent dark background for better readability */
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  scroll-snap-align: center;
+  color: #fff;
+}
+
+.testimonial-pfp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.testimonial-quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Navigation Buttons */
+.scroll-btn {
+  background-color: #00a693;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #007f67;
+}
+
+.scroll-btn.left-btn {
+  position: absolute;
+  left: -50px;
+}
+
+.scroll-btn.right-btn {
+  position: absolute;
+  right: -50px;
+}
+
+/* Smooth Scrollbar */
+.testimonials-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonials-container::-webkit-scrollbar-thumb {
+  background: #00a693;
+  border-radius: 10px;
+}
+
+.testimonials-container::-webkit-scrollbar-track {
+  background: #e0e0e0;
 }
