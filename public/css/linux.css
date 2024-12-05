@@ -1,162 +1,241 @@
-/* Main Content Section */
-.content-section {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 40px;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Text Content aligned in F-pattern */
-.text-content {
-    max-width: 60%;
-}
-
-.text-content h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.text-content p,
-.text-content ul {
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #555;
+    margin: 0;
+    color: #fff; /* Default text color */
+    background-image: url('/images/linux.webp'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+nav .logo img {
+    height: 40px; /* Adjust the height of the logo as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    transition: transform 0.3s ease; /* Smooth animation for mobile menu */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00a693; /* Highlight effect */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: rgba(0, 0, 0, 0.9); /* Darker for mobile */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+}
+
+/* Content Section */
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Text Content Styling */
+.text-content {
+    width: 61.8%; /* Golden ratio proportion */
+    margin: 0 auto 20px;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.text-content h1,
+.text-content h2 {
+    margin-bottom: 15px;
+    color: #42cf90; /* Gold color for headings */
+}
+
+.text-content p {
+    margin-bottom: 20px;
+    color: #f0f0f0; /* Light text color */
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
     margin-bottom: 20px;
 }
 
-/* Right-Side Image at Top Right for F-pattern Layout */
+ul li::before {
+    content: "•";
+    color: #42cf90; /* Gold bullet points */
+    margin-right: 10px;
+}
+
+/* Right-Side Image Styling */
 .right-image {
-    position: absolute;
-    top: 120px;
-    right: 40px;
-    width: 450px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .right-image img {
-    width: 100%;
+    max-width: 38.2%; /* Golden ratio proportion */
     height: auto;
     display: block;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Checklist styling consistent with Git checklist */
+/* Checklist Styling */
 .checklist {
-    position: fixed;
-    top: 150px;
-    right: 20px;
-    width: 250px;
+    width: 38.2%; /* Golden ratio proportion */
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
-    max-height: 400px;
-    cursor: grab;
+    border: none; /* Remove border to avoid white box issue */
+    background: rgba(255, 255, 255, 0.9); /* Light semi-transparent background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    color: #000; /* Black text for checklist */
+    border-radius: 10px;
 }
 
 .checklist h2 {
-    font-size: 18px;
     margin-bottom: 15px;
-    color: #005f73;
+    text-align: center;
+    color: #333; /* Darker heading */
 }
 
 .checklist ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
-.checklist-item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
+.checklist li {
     margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.toggle {
+.checklist li .toggle {
+    color: #007f67; /* Green color for toggle text */
     cursor: pointer;
     font-weight: bold;
-    color: #00a693;
-    transition: color 0.3s;
 }
 
-.toggle.checked {
-    color: #00a693; /* Checked color */
-}
-
-/* Additional Spacing for F-Pattern Layout */
-.content-section h2 {
-    margin-top: 30px;
-    color: #005f73;
-    font-size: 24px;
-}
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.fade-in {
-    animation: fadeIn 1s ease-in forwards;
-    opacity: 0; /* Start invisible for the animation */
-}
-
-/* Staggered Fade-In Timing */
-.fade-in:nth-child(1) {
-    animation-delay: 0.02s;
-}
-
-.fade-in:nth-child(2) {
-    animation-delay: 0.06s;
-}
-
-.fade-in:nth-child(3) {
-    animation-delay: 0.1s;
-}
-
-.fade-in:nth-child(4) {
-    animation-delay: 0.2s;
-}
-/* Adjustments for screens smaller than 768px (mobile devices) */
+/* Responsive Design */
 @media (max-width: 768px) {
-    /* Stack navigation links vertically for mobile */
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Stack text content and image vertically */
     .content-section {
-        flex-direction: column;
-        align-items: center;
         padding: 20px;
     }
 
-    .text-content {
-        max-width: 100%;
+    .text-content,
+    .checklist {
+        width: 100%; /* Full width for mobile screens */
         margin: 0;
     }
 
-    /* Resize and reposition image for mobile */
-    .right-image {
-        position: static;
-        width: 80%;
-        margin-top: 20px;
-    }
-
-    /* Adjust checklist size and position */
-    .checklist {
-        position: static;
-        width: 100%;
-        max-height: none;
-        margin-top: 20px;
-        cursor: auto;
+    .right-image img {
+        max-width: 100%; /* Adjust image size for smaller screens */
     }
 }
-
-
 

@@ -48,3 +48,13 @@ setInterval(autoScroll, 3000); // Auto-scroll every 3 seconds
 testimonialsContainer.addEventListener('scroll', () => {
     // No additional action needed here; user scrolling is now independent of auto-scroll
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    // Toggle the active class for the hamburger and nav-links
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  });

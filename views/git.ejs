@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Guide to Git</title>
-    <link rel="stylesheet" href="/css/styles.css">
+   
     <link rel="stylesheet" href="/css/git.css">
 </head>
 <body>
-       <!-- Navigation Bar -->
-       <nav class="fade-in">
-        <div class="logo">SAGE</div>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img src="/images/Sagelogo.png" alt="SAGE Logo">
+            </a>
+        </div>
         <ul class="nav-links">
             <li><a href="/">HOME</a></li>
             <li><a href="/git">GIT</a></li>
@@ -18,66 +21,40 @@
             <li><a href="/webtech">WEB TECHNOLOGIES</a></li>
             <li><a href="/tips">TIPS</a></li>
         </ul>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
-      
-          
 
     <!-- Main Content Section -->
-    <section class="content-section fade-in">
-        <div class="text-content fade-in">
+    <section class="content-section">
+        <!-- Text Content -->
+        <div class="text-content">
             <h1>A GUIDE TO GITHUB</h1>
-            <p>GitHub was co-founded by Tom Preston-Werner, Chris Wanstrath, PJ Hyett, and Scott Chacon in 2008 as a platform to streamline collaboration among software developers. They built GitHub on Git, a version-control system created by Linus Torvalds in 2005. The co-founders saw a need for a more user-friendly and social way to use Git, envisioning a platform where developers could not only manage code but also collaborate seamlessly. GitHub quickly gained popularity due to its unique blend of social networking and powerful version control tools.</p>
-
+            <p>GitHub was co-founded by Tom Preston-Werner, Chris Wanstrath, PJ Hyett, and Scott Chacon in 2008 as a platform to streamline collaboration among software developers. They built GitHub on Git, a version-control system created by Linus Torvalds in 2005. The co-founders envisioned a user-friendly platform where developers could collaborate seamlessly, managing code while integrating social networking features. As GitHub gained popularity, it became the go-to platform for open-source projects, empowering developers worldwide.</p>
+            
             <h2>HISTORY</h2>
-            <p>By 2012, GitHub had become the go-to platform for developers, hosting millions of projects and establishing itself as a central hub for open-source software. In 2018, Microsoft acquired GitHub for $7.5 billion, sparking discussions on the future of open-source but ultimately leading to new investments in GitHub’s capabilities, such as GitHub Actions for CI/CD and Codespaces for cloud-based development. Today, GitHub remains one of the largest code-hosting platforms, empowering millions of developers worldwide to collaborate, innovate, and contribute to open-source projects.</p>
-
+            <p>By 2012, GitHub had established itself as the primary hub for developers, hosting millions of projects. Microsoft acquired GitHub in 2018 for $7.5 billion, sparking debates on open-source future. However, the acquisition led to new tools like GitHub Actions and Codespaces, enhancing its capabilities. Today, GitHub remains the largest code-hosting platform, driving innovation and collaboration for developers worldwide.</p>
+            
             <h2>RESOURCES</h2>
-            <p>Here are some popular sources for free GitHub resources you might find helpful:</p>
-
+            <p>Explore these free resources:</p>
             <ul>
-                <li><strong>Frontend/UI Kits</strong>:
-                    <ul>
-                        <li><a href="https://github.com/creativetimofficial">Creative Tim</a>: Offers various UI kits and dashboards.</li>
-                        <li><a href="https://github.com/n33">HTML5 UP</a>: Free HTML5 and CSS3 website templates.</li>
-                        <li><a href="https://github.com/DesignRevision/shards-dashboard">Shards</a>: Free, modern UI toolkit for dashboards and user interfaces.</li>
-                    </ul>
-                </li>
-                <li><strong>JavaScript Libraries and Frameworks</strong>:
-                    <ul>
-                        <li><a href="https://github.com/freeCodeCamp/freeCodeCamp">Free Code Camp</a>: Excellent for coding exercises, tutorials, and projects.</li>
-                        <li><a href="https://github.com/chartjs/Chart.js">Chart.js</a>: Open-source JavaScript library for creating charts and graphs.</li>
-                        <li><a href="https://github.com/mrdoob/three.js">Three.js</a>: For creating 3D graphics on the web.</li>
-                    </ul>
-                </li>
-                <li><strong>CSS Frameworks and Resources</strong>:
-                    <ul>
-                        <li><a href="https://github.com/twbs/bootstrap">Bootstrap</a>: Essential front-end toolkit for responsive design.</li>
-                        <li><a href="https://github.com/tailwindlabs/tailwindcss">Tailwind CSS</a>: A popular utility-first CSS framework.</li>
-                        <li><a href="https://github.com/animate-css/animate.css">Animate.css</a>: Collection of cross-browser animations.</li>
-                    </ul>
-                </li>
-                <li><strong>Web Development Tutorials and Sample Projects</strong>:
-                    <ul>
-                        <li><a href="https://github.com/TheOdinProject">The Odin Project</a>: Free full-stack development curriculum.</li>
-                        <li><a href="https://github.com/frontendmentor">Frontend Mentor</a>: Provides challenges to improve your HTML, CSS, and JavaScript.</li>
-                    </ul>
-                </li>
-                <li><strong>Design and Prototyping Tools</strong>:
-                    <ul>
-                        <li><a href="https://github.com/pablostanley/openpeeps">Open Peeps</a>: Free hand-drawn illustration library.</li>
-                        <li><a href="https://github.com/egoist/hack">Hero Patterns</a>: A collection of repeatable SVG background patterns.</li>
-                    </ul>
-                </li>
+                <li><strong>Frontend/UI Kits:</strong> Creative Tim, HTML5 UP, Shards</li>
+                <li><strong>JavaScript Libraries:</strong> Free Code Camp, Chart.js, Three.js</li>
+                <li><strong>CSS Frameworks:</strong> Bootstrap, Tailwind CSS, Animate.css</li>
+                <li><strong>Web Development Tools:</strong> The Odin Project, Frontend Mentor</li>
+                <li><strong>Design Resources:</strong> Open Peeps, Hero Patterns</li>
             </ul>
         </div>
 
-        <!-- Right-Side Image for F-pattern Layout -->
-        <div class="right-image fade-in">
+        <!-- Right-Side Image -->
+        <div class="right-image">
             <img src="images/github-overview 1.png" alt="Git Illustration">
         </div>
 
-        <!-- Draggable Checklist -->
-        <div class="checklist draggable fade-in" id="checklist">
+        <div class="checklist">
             <h2>Git Checklist</h2>
             <ul>
                 <li class="checklist-item">LEARN THE HISTORY OF GIT <span class="toggle">X</span></li>
@@ -87,11 +64,25 @@
                 <li class="checklist-item">USE OUR FREE RESOURCES <span class="toggle">X</span></li>
             </ul>
         </div>
+        
     </section>
-    <script src="/js/gitscript.js"></script>
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
 
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
+        });
+    </script>
+      <script src="/js/gitscript.js"></script>
+  
 </body>
 </html>
+
 
 
 

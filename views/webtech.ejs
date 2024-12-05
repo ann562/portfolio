@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Guide to Web Technologies</title>
     <!-- Correct CSS Paths -->
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/webtech.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="fade-in">
-        <div class="logo">SAGE</div>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img src="/images/Sagelogo.png" alt="SAGE Logo">
+            </a>
+        </div>
         <ul class="nav-links">
             <li><a href="/">HOME</a></li>
             <li><a href="/git">GIT</a></li>
@@ -19,10 +22,16 @@
             <li><a href="/webtech">WEB TECHNOLOGIES</a></li>
             <li><a href="/tips">TIPS</a></li>
         </ul>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
 
     <!-- Main Content Section -->
     <section class="content-section fade-in">
+        <!-- Text Content -->
         <div class="text-content fade-in">
             <h1>A GUIDE TO WEB TECH</h1>
             <p>The evolution of web technologies began in 1989 when <strong>Tim Berners-Lee</strong> created the World Wide Web, HTML, HTTP, and URLs, enabling the first interconnected websites. By 1993, <strong>Mosaic</strong> became the first widely used browser, followed by <strong>Netscape Navigator</strong> in 1994, which popularized web access.</p>
@@ -32,7 +41,6 @@
 
             <h2>RESOURCES</h2>
             <p>Here are some essential resources for learning about web technologies, from beginner to advanced levels:</p>
-
             <ul>
                 <li><strong>Books</strong>:
                     <ul>
@@ -43,9 +51,9 @@
                 </li>
                 <li><strong>Websites & Tutorials</strong>:
                     <ul>
-                        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>: Comprehensive documentation for HTML, CSS, JavaScript, and more.</li>
-                        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a>: Beginner-friendly tutorials covering all web basics.</li>
-                        <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a>: Free courses on web development, JavaScript, and libraries like React.</li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>: Comprehensive documentation for HTML, CSS, JavaScript, and more.</li>
+                        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a>: Beginner-friendly tutorials covering all web basics.</li>
+                        <li><a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>: Free courses on web development, JavaScript, and libraries like React.</li>
                     </ul>
                 </li>
                 <li><strong>Video Courses</strong>:
@@ -57,7 +65,7 @@
                 <li><strong>Community and Forums</strong>:
                     <ul>
                         <li>Stack Overflow: Great for troubleshooting specific problems.</li>
-                        <li>Reddit (<a href="https://www.reddit.com/r/webdev/" target="_blank">r/webdev</a>, <a href="https://www.reddit.com/r/learnprogramming/" target="_blank">r/learnprogramming</a>): Discussion, advice, and resources from web development communities.</li>
+                        <li>Reddit (<a href="https://www.reddit.com/r/webdev/" target="_blank" rel="noopener noreferrer">r/webdev</a>, <a href="https://www.reddit.com/r/learnprogramming/" target="_blank" rel="noopener noreferrer">r/learnprogramming</a>): Discussion, advice, and resources from web development communities.</li>
                     </ul>
                 </li>
             </ul>
@@ -81,7 +89,18 @@
         </div>
     </section>
 
-    <!-- Corrected JavaScript Path -->
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
+        });
+    </script>
     <script src="/js/webtech.js"></script>
 </body>
 </html>

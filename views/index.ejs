@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAGE | Tech Survival Guide</title>
+    <title>SAGE - Home</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-   
-    <!-- The rest of your page content -->
     <!-- Navigation Bar -->
-    <nav class="fade-in">
-        <div class="logo">SAGE</div>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img src="/images/Sagelogo.png" alt="SAGE Logo">
+            </a>
+        </div>
         <ul class="nav-links">
             <li><a href="/">HOME</a></li>
             <li><a href="/git">GIT</a></li>
@@ -19,113 +21,99 @@
             <li><a href="/webtech">WEB TECHNOLOGIES</a></li>
             <li><a href="/tips">TIPS</a></li>
         </ul>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
 
-    
-
-    <!-- Z-Pattern Content -->
-    <section class="z-pattern">
-        <!-- Section 1 -->
-        <div class="section-one">
-            <h1><span class="highlight">The Student</span> Tech Survival Guide</h1>
-            <p>Empower yourself with the tools, insights, and wisdom to navigate the tech world confidently. Explore foundational knowledge and practical resources.</p>
-            <a href="#learn-more" class="btn-primary">Learn More</a>
-        </div>
-
-        <!-- Section 3 -->
-        <div class="section-three">
-            <h2>Join Our Community</h2>
-            <p>Get the latest updates, tips, and free resources directly in your inbox.</p>
-            <form class="email-signup">
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Sign Up</button>
-            </form>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Welcome to SAGE</h1>
+            <p>Your ultimate guide to mastering Git, Linux, Web Technologies, and more.</p>
+            <a href="#resources" class="btn-primary">Explore Resources</a>
         </div>
     </section>
-    <!-- Popcorn Icons Section -->
-    <section class="popcorn-logos">
-        <!-- Git Logo -->
-        <div class="popcorn-item">
-            <a href="/git" target="_self">
-                <img src="/images/logo1.webp" alt="GIT" class="popcorn-icon">
-            </a>
-            <p class="popcorn-label">GIT</p>
-        </div>
-        <!-- Linux Logo -->
-        <div class="popcorn-item">
-            <a href="/linux" target="_self">
-                <img src="/images/logo2.webp" alt="LINUX" class="popcorn-icon">
-            </a>
-            <p class="popcorn-label">LINUX</p>
-        </div>
-        <!-- Web Technologies Logo -->
-        <div class="popcorn-item">
-            <a href="/webtech" target="_self">
-                <img src="/images/logo3.webp" alt="WEB TECHNOLOGIES" class="popcorn-icon">
-            </a>
-            <p class="popcorn-label">WEB TECHNOLOGIES</p>
-        </div>
-        <!-- Tips Logo -->
-        <div class="popcorn-item">
-            <a href="/tips" target="_self">
-                <img src="/images/tips.webp" alt="TIPS" class="popcorn-icon">
-            </a>
-            <p class="popcorn-label">TIPS</p>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <div class="z-pattern">
+            <div class="section-one">
+                <h1>Learn Git</h1>
+                <p>Master version control with our comprehensive Git tutorials. Understand the history, commands, and workflows to streamline your development process.</p>
+                <a href="/git" class="btn-primary">Explore Git</a>
+            </div>
+            <div class="section-three">
+                <h2>Why Linux?</h2>
+                <p>Discover why Linux powers the majority of servers, supercomputers, and development environments. Learn to navigate and operate like a pro.</p>
+                <a href="/linux" class="btn-primary">Learn Linux</a>
+            </div>
         </div>
     </section>
-    
-<!-- Testimonials Section -->
-<section class="testimonials">
-    <h2>What Our Users Say</h2>
-    <div class="testimonials-wrapper">
-        <button class="scroll-btn left-btn">←</button>
+
+    <section class="testimonials">
+        <h2>What People Say</h2>
         <div class="testimonials-container">
-            <!-- Testimonial Item 1 -->
             <div class="testimonial-item">
-                <img src="/images/Mask group (1).png" alt="User 1" class="testimonial-pfp">
-                <p class="testimonial-quote">"This guide has been a game-changer for my tech journey!"</p>
-                <p class="testimonial-name">- Alex Johnson</p>
+                <img src="/images/person1.png" alt="User 1" class="testimonial-pfp">
+                <p class="testimonial-quote">"SAGE has been a game-changer in my learning journey!"</p>
+                <p class="testimonial-name">- Jane Doe</p>
             </div>
-            <!-- Testimonial Item 2 -->
             <div class="testimonial-item">
-                <img src="/images/Mask group (2).png" alt="User 2" class="testimonial-pfp">
-                <p class="testimonial-quote">"I love how practical and easy-to-follow the tutorials are."</p>
-                <p class="testimonial-name">- Jamie Lee</p>
+                <img src="/images/person3.png" alt="User 2" class="testimonial-pfp">
+                <p class="testimonial-quote">"The resources and tutorials are easy to follow and incredibly helpful."</p>
+                <p class="testimonial-name">- John Smith</p>
             </div>
-            <!-- Testimonial Item 3 -->
             <div class="testimonial-item">
-                <img src="/images/Mask group.png" alt="User 3" class="testimonial-pfp">
-                <p class="testimonial-quote">"Highly recommend this guide to anyone starting in tech!"</p>
-                <p class="testimonial-name">- Taylor Smith</p>
-            </div>
-            <!-- Testimonial Item 4 -->
-            <div class="testimonial-item">
-                <img src="/images/testimon.png" alt="User 4" class="testimonial-pfp">
-                <p class="testimonial-quote">"The cheat sheets and resources have been incredibly helpful."</p>
-                <p class="testimonial-name">- Riley Davis</p>
-            </div>
-            <!-- Testimonial Item 5 -->
-            <div class="testimonial-item">
-                <img src="/images/testimon2.png" alt="User 5" class="testimonial-pfp">
-                <p class="testimonial-quote">"A must-have guide for anyone new to tech!"</p>
-                <p class="testimonial-name">- Morgan Brown</p>
-            </div>
-            <!-- Testimonial Item 6 -->
-            <div class="testimonial-item">
-                <img src="/images/testimon3.png" alt="User 6" class="testimonial-pfp">
-                <p class="testimonial-quote">"The tutorials are clear, concise, and easy to follow."</p>
-                <p class="testimonial-name">- Jordan Miller</p>
+                <img src="/images/person2.png" alt="User 3" class="testimonial-pfp">
+                <p class="testimonial-quote">"I gained confidence in Git and Linux thanks to SAGE."</p>
+                <p class="testimonial-name">- Alice Brown</p>
             </div>
         </div>
-        <button class="scroll-btn right-btn">→</button>
-    </div>
-</section>
+    </section>
+    
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <h2>Downloadable Resources</h2>
+        <ul class="resource-list">
+            <li><a href="/downloads/git-cheat-sheet.pdf" download>Git Cheat Sheet</a></li>
+            <li><a href="/downloads/linux-commands-guide.pdf" download>Linux Commands Guide</a></li>
+            <li><a href="/downloads/web-techniques.pdf" download>Web Techniques</a></li>
+            <li><a href="/downloads/productivity-tips.pdf" download>Productivity Tips</a></li>
+        </ul>
+    </section>
 
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/git">Git</a></li>
+                <li><a href="/linux">Linux</a></li>
+                <li><a href="/webtech">Web Technologies</a></li>
+                <li><a href="/tips">Tips</a></li>
+            </ul>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2024 SAGE. All Rights Reserved.</p>
+            <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+        </div>
+    </footer>
 
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
 
-
-
-    <script src="/js/index.js"></script>
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 </html>
 
