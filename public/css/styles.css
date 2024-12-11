@@ -42,11 +42,17 @@ nav .logo img {
   display: block;
   cursor: pointer;
 }
+/* Navigation Links */
 .nav-links {
   display: flex;
-  list-style: none;
+  list-style: none; /* Remove bullet points */
   gap: 20px;
   transition: transform 0.3s ease; /* Smooth opening/closing animation */
+}
+
+/* Remove teal circles from list items */
+ul li::before {
+  content: none; /* Remove the custom bullet points */
 }
 
 
@@ -55,11 +61,6 @@ nav .logo img {
 }
 
 
-ul li::before {
-  content: "•";
-  color: #42cf90; /* Gold bullet points */
-  margin-right: 10px;
-}
 
 
 .nav-links a {

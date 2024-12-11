@@ -11,9 +11,9 @@
 /* Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 1.6;
-  
+    margin: 0;
     color: #fff; /* Default text color */
     background-image: url('/images/git.webp'); /* Replace with the actual path to the no-text image */
     background-size: cover;
@@ -43,17 +43,19 @@ nav .logo {
     font-weight: bold;
     color: #fff;
 }
+
 nav .logo img {
     height: 40px; /* Adjust the height of the logo as needed */
     width: auto; /* Maintain aspect ratio */
     display: block;
     cursor: pointer;
 }
+
 .nav-links {
     display: flex;
-    list-style: none;
+    list-style: none; /* Remove bullet points */
     gap: 20px;
-    transition: transform 0.3s ease; /* Smooth animation for mobile menu */
+    transition: transform 0.3s ease; /* Smooth opening/closing animation */
 }
 
 .nav-links li {
@@ -133,8 +135,11 @@ nav .logo img {
 
 /* Content Section */
 .content-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%; /* Space between sections */
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 100px auto; /* Adds space below navigation bar */
     padding: 40px 20px;
 }
 
@@ -142,20 +147,19 @@ nav .logo img {
 .text-content {
     width: 61.8%; /* Golden ratio proportion */
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for readability */
-    margin: 0 auto; /* Center the text content */
     padding: 20px;
     border-radius: 10px;
     text-align: justify;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.text-content h1, 
+.text-content h1,
 .text-content h2 {
     margin-bottom: 15px;
-    color: #42cf90; /* Gold color for headings */
+    color: #42cf90; /* Highlight color for headings */
 }
 
-.text-content p, 
+.text-content p,
 .text-content ul {
     margin-bottom: 20px;
     color: #f0f0f0; /* Light text color */
@@ -167,37 +171,34 @@ ul {
     margin-bottom: 20px;
 }
 
-ul li::before {
-    content: "•";
-    color: #42cf90; /* Gold bullet points */
-    margin-right: 10px;
+/* Right-Side Content */
+.right-side {
+    width: 38.2%; /* Golden ratio for the right side */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between the image and checklist */
 }
 
-/* Right-Side Image Styling */
 .right-image {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    width: 100%;
 }
 
 .right-image img {
-    max-width: 38.2%; /* Golden ratio proportion */
+    width: 100%; /* Scale image proportionally */
     height: auto;
-    display: block;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Checklist Styling */
 .checklist {
-    width: 38.2%; /* Golden ratio proportion */
-    margin: 20px auto;
+    width: 100%;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9); /* Light semi-transparent background */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    color: #000; /* Black text for checklist */
     border-radius: 10px;
-    border: none; /* Remove any border to avoid white box appearance */
+    color: #000; /* Black text for checklist */
 }
 
 .checklist h2 {
@@ -215,6 +216,8 @@ ul li::before {
     margin-bottom: 10px;
     font-size: 16px;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
 }
 
 .checklist li .toggle {
@@ -226,20 +229,19 @@ ul li::before {
 /* Responsive Design */
 @media (max-width: 768px) {
     .content-section {
-        padding: 20px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .text-content, 
-    .checklist {
+    .text-content,
+    .right-side {
         width: 100%; /* Full width for mobile screens */
-        margin: 0;
     }
 
     .right-image img {
-        max-width: 100%; /* Adjust image size for smaller screens */
+        width: 100%;
     }
 }
-
 
 
 
