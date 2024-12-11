@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Guide to Linux</title>
+    <link rel="stylesheet" href="/css/linux.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img src="/images/Sagelogo.png" alt="SAGE Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/git">GIT</a></li>
+            <li><a href="/linux">LINUX</a></li>
+            <li><a href="/webtech">WEB TECHNOLOGIES</a></li>
+            <li><a href="/tips">TIPS</a></li>
+        </ul>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <!-- Text Content -->
+        <div class="text-content">
+            <h1>A GUIDE TO LINUX</h1>
+            <p>Linux began as a response to the proprietary nature of Unix. In 1983, <strong>Richard Stallman</strong> launched the <strong>GNU Project</strong> to create a free, Unix-like operating system, producing key tools and utilities. However, GNU lacked a core component—a functioning kernel.</p>
+            <p>In 1991, <strong>Linus Torvalds</strong>, a Finnish student, developed the Linux kernel as a personal project to explore a free, Unix-compatible OS on his Intel PC. He shared it online, inviting collaboration, and Linux quickly attracted a global community of developers. Linux's open-source license allowed anyone to view, modify, and distribute the code, fostering rapid innovation.</p>
+            <p>The combination of Torvalds' Linux kernel with GNU tools created a fully functional OS, commonly called <strong>GNU/Linux</strong>. It became popular in academic, business, and eventually consumer spaces. Today, Linux powers everything from servers and supercomputers to smartphones (through Android). Torvalds and contributors continue to improve Linux, making it one of the most reliable and adaptable OS options globally.</p>
+
+            <h2>RESOURCES</h2>
+            <ul>
+                <li><strong>Books:</strong>
+                    <ul>
+                        <li>"The Linux Command Line" by William E. Shotts</li>
+                        <li>"How Linux Works" by Brian Ward</li>
+                        <li>"Linux Bible" by Christopher Negus</li>
+                    </ul>
+                </li>
+                <li><strong>Websites & Tutorials:</strong>
+                    <ul>
+                        <li><a href="https://training.linuxfoundation.org/" target="_blank">Linux Foundation Training</a></li>
+                        <li><a href="https://linuxjourney.com/" target="_blank">Linux Journey</a></li>
+                        <li><a href="https://www.tldp.org/" target="_blank">The Linux Documentation Project</a></li>
+                    </ul>
+                </li>
+                <li><strong>Community and Forums:</strong>
+                    <ul>
+                        <li><a href="https://www.linux.org/forums/" target="_blank">Linux.org Forum</a></li>
+                        <li><a href="https://www.reddit.com/r/linux/" target="_blank">Reddit (r/linux)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right-Side Content -->
+        <div class="right-side">
+            <!-- Right-Side Image -->
+            <div class="right-image">
+                <img src="/images/istockphoto-1403355116-612x612-removebg-preview 1.png" alt="Linux Illustration">
+            </div>
+
+            <!-- Checklist -->
+            <div class="checklist">
+                <h2>Linux Checklist</h2>
+                <ul>
+                    <li class="checklist-item">LEARN THE HISTORY OF LINUX <span class="toggle">X</span></li>
+                    <li class="checklist-item">USE THE CHEAT SHEET TO STUDY <span class="toggle">X</span></li>
+                    <li class="checklist-item">TAKE THE PRACTICE QUIZ <span class="toggle">X</span></li>
+                    <li class="checklist-item">USE OUR STEP BY STEP TUTORIAL <span class="toggle">X</span></li>
+                    <li class="checklist-item">USE OUR FREE RESOURCES <span class="toggle">X</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
+        });
+    </script>
+    <script src="/js/linux.js"></script>
+</body>
+</html>
+

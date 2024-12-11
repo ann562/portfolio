@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Tips and Resources</title>
+    <link rel="stylesheet" href="/css/tips.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img src="/images/Sagelogo.png" alt="SAGE Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/git">GIT</a></li>
+            <li><a href="/linux">LINUX</a></li>
+            <li><a href="/webtech">WEB TECHNOLOGIES</a></li>
+            <li><a href="/tips">TIPS</a></li>
+        </ul>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <!-- Text Content -->
+        <div class="text-content">
+            <h1>EXTRA TIPS AND RESOURCES</h1>
+            <p>Here are some additional tips and resources to deepen your knowledge in Git, Linux, and Web technologies.</p>
+
+            <h2>Git Resources and Tips</h2>
+            <h3>Resources:</h3>
+            <ul>
+                <li><strong>Pro Git (Book)</strong>: Available for free at <a href="https://git-scm.com/book/en/v2" target="_blank">progit.org</a>. Covers all levels, from basics to advanced workflows.</li>
+                <li><strong>Learn Git Branching</strong> (<a href="https://learngitbranching.js.org/" target="_blank">learngitbranching.js.org</a>): Interactive tutorial for visualizing Git branches and commits.</li>
+                <li><strong>GitHub Learning Lab</strong>: Hands-on Git and GitHub tutorials with guided exercises.</li>
+            </ul>
+            <h3>Tips:</h3>
+            <ul>
+                <li>Practice using Git’s command line instead of GUIs to gain a deeper understanding.</li>
+                <li>Use Git aliases (e.g., <code>git co</code> for <code>git checkout</code>) to speed up your workflow.</li>
+                <li>Learn rebasing and stashing to keep your commit history clean.</li>
+            </ul>
+
+            <h2>Linux Resources and Tips</h2>
+            <h3>Resources:</h3>
+            <ul>
+                <li><strong>LinuxCommand.org</strong>: Beginner’s guide to the Linux command line.</li>
+                <li><strong>OverTheWire Wargames</strong> (<a href="https://overthewire.org/wargames/" target="_blank">overthewire.org</a>): Fun exercises to practice Linux skills through terminal-based puzzles.</li>
+                <li><strong>Red Hat Enterprise Linux Developer Program</strong> (<a href="https://developers.redhat.com/" target="_blank">developer.redhat.com</a>): Offers free RHEL for developers, great for learning enterprise-grade Linux.</li>
+            </ul>
+            <h3>Tips:</h3>
+            <ul>
+                <li>Get familiar with <code>grep</code>, <code>awk</code>, <code>sed</code>, and <code>find</code> for powerful text processing.</li>
+                <li>Use <code>tmux</code> or <code>screen</code> for session management in terminal workflows.</li>
+                <li>Learn how to write bash scripts to automate routine tasks.</li>
+            </ul>
+
+            <h2>Web Technologies Resources and Tips</h2>
+            <h3>Resources:</h3>
+            <ul>
+                <li><strong>CSS-Tricks</strong> (<a href="https://css-tricks.com/" target="_blank">css-tricks.com</a>): Guides, tips, and tricks for mastering CSS.</li>
+                <li><strong>JavaScript.info</strong>: An extensive JavaScript tutorial covering all core concepts.</li>
+                <li><strong>Frontend Mentor</strong> (<a href="https://www.frontendmentor.io/" target="_blank">frontendmentor.io</a>): Hands-on projects for practicing HTML, CSS, and JavaScript.</li>
+            </ul>
+            <h3>Tips:</h3>
+            <ul>
+                <li>Use CodePen and JSFiddle to quickly test and share web code snippets.</li>
+                <li>Regularly check <a href="https://caniuse.com/" target="_blank">Can I use</a> to ensure your CSS and JS features are cross-browser compatible.</li>
+                <li>Learn responsive design principles and use media queries to make web pages adaptable across devices.</li>
+            </ul>
+        </div>
+
+        <!-- Right-Side Content -->
+        <div class="right-side">
+            <!-- Right-Side Image -->
+            <div class="right-image">
+                <img src="/images/istockphoto-1265168796-612x612-removebg-preview 1.png" alt="Tips and Resources Illustration">
+            </div>
+
+            <!-- Checklist -->
+            <div class="checklist">
+                <h2>Tips Checklist</h2>
+                <ul>
+                    <li class="checklist-item">LEARN THE HISTORY OF GIT <span class="toggle">X</span></li>
+                    <li class="checklist-item">USE THE CHEAT SHEET TO STUDY <span class="toggle">X</span></li>
+                    <li class="checklist-item">TAKE THE PRACTICE QUIZ <span class="toggle">X</span></li>
+                    <li class="checklist-item">USE OUR STEP BY STEP TUTORIAL <span class="toggle">X</span></li>
+                    <li class="checklist-item">USE OUR FREE RESOURCES <span class="toggle">X</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
+        });
+    </script>
+    <script src="/js/tips.js"></script>
+</body>
+</html>
+

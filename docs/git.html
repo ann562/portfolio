@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Guide to Git</title>
+    <link rel="stylesheet" href="/css/git.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img src="/images/Sagelogo.png" alt="SAGE Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/git">GIT</a></li>
+            <li><a href="/linux">LINUX</a></li>
+            <li><a href="/webtech">WEB TECHNOLOGIES</a></li>
+            <li><a href="/tips">TIPS</a></li>
+        </ul>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <!-- Text Content -->
+        <div class="text-content">
+            <h1>A GUIDE TO GITHUB</h1>
+            <p>GitHub was co-founded by Tom Preston-Werner, Chris Wanstrath, PJ Hyett, and Scott Chacon in 2008 as a platform to streamline collaboration among software developers. They built GitHub on Git, a version-control system created by Linus Torvalds in 2005. The co-founders envisioned a user-friendly platform where developers could collaborate seamlessly, managing code while integrating social networking features. As GitHub gained popularity, it became the go-to platform for open-source projects, empowering developers worldwide.</p>
+            
+            <h2>HISTORY</h2>
+            <p>By 2012, GitHub had established itself as the primary hub for developers, hosting millions of projects. Microsoft acquired GitHub in 2018 for $7.5 billion, sparking debates on open-source future. However, the acquisition led to new tools like GitHub Actions and Codespaces, enhancing its capabilities. Today, GitHub remains the largest code-hosting platform, driving innovation and collaboration for developers worldwide.</p>
+            
+            <h2>RESOURCES</h2>
+            <p>Explore these free resources:</p>
+            <ul>
+                <li><strong>Frontend/UI Kits:</strong> Creative Tim, HTML5 UP, Shards</li>
+                <li><strong>JavaScript Libraries:</strong> Free Code Camp, Chart.js, Three.js</li>
+                <li><strong>CSS Frameworks:</strong> Bootstrap, Tailwind CSS, Animate.css</li>
+                <li><strong>Web Development Tools:</strong> The Odin Project, Frontend Mentor</li>
+                <li><strong>Design Resources:</strong> Open Peeps, Hero Patterns</li>
+            </ul>
+        </div>
+
+        <!-- Right-Side Content -->
+        <div class="right-side">
+            <!-- Right-Side Image -->
+            <div class="right-image">
+                <img src="/images/github-overview 1.png" alt="Git Illustration">
+            </div>
+
+            <!-- Checklist -->
+            <div class="checklist">
+                <h2>Git Checklist</h2>
+                <ul>
+                    <li class="checklist-item">LEARN THE HISTORY OF GIT <span class="toggle">X</span></li>
+                    <li class="checklist-item">USE THE CHEAT SHEET TO STUDY <span class="toggle">X</span></li>
+                    <li class="checklist-item">TAKE THE PRACTICE QUIZ <span class="toggle">X</span></li>
+                    <li class="checklist-item">USE OUR STEP BY STEP TUTORIAL <span class="toggle">X</span></li>
+                    <li class="checklist-item">USE OUR FREE RESOURCES <span class="toggle">X</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                hamburger.classList.toggle("active");
+            });
+        });
+    </script>
+    <script src="/js/gitscript.js"></script>
+</body>
+</html>
+
+
+
