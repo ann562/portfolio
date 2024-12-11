@@ -15,7 +15,7 @@ body {
     line-height: 1.6;
     margin: 0;
     color: #fff; /* Default text color */
-    background-image: url('/images/git.webp'); /* Replace with the actual path to the no-text image */
+    background-image: url('../images/git.webp'); /* Replace with the actual path to the no-text image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

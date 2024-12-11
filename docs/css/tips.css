@@ -14,7 +14,7 @@ body {
     font-size: 19px;
     line-height: 1.6;
     color: #fff; /* Default text color */
-    background-image: url('/images/tips.webp'); /* Replace with your background image */
+    background-image: url('../images/tips.webp'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

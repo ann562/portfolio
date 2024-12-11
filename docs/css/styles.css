@@ -133,15 +133,14 @@ ul li::before {
     transform: rotate(-45deg) translateY(-8px);
   }
 }
-
-/* Hero Section */
 .hero-section {
   height: 100vh;
-  background-image: url('./images/home.webp');
+  background-image: url('../images/home.webp'); /* Adjusted relative path */
   background-size: cover;
   background-position: center;
   position: relative;
 }
+
 
 .hero-section::before {
   content: '';
@@ -224,7 +223,7 @@ ul li::before {
 /* Testimonials Section */
 .testimonials {
   padding: 60px 5%;
-  background-image: url('./images/background.webp'); /* Update the path to the generated image */
+  background-image: url('../images/background.webp'); /* Update the path to the generated image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
