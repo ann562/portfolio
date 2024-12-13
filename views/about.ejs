@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ann.Shia | UX Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary: #FF6B6B;
+      --secondary: #4ECDC4;
+      --dark: #2D3436;
+      --light: #F8F9FA;
+      --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .cursor {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      transition: transform 0.2s ease;
+    }
+
+    .cursor-follow {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      transition: transform 0.1s ease;
+    }
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient);
+      transform-origin: 0%;
+      z-index: 1000;
+    }
+
+    nav {
+      padding: 2rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(248, 249, 250, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links a {
+      margin-left: 2rem;
+      font-weight: 500;
+      color: var(--dark);
+      text-decoration: none;
+      position: relative;
+    }
+
+    #content {
+      padding: 8rem 5% 4rem;
+    }
+
+    .section-heading {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .content-section {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .content-left {
+      flex: 1 1 40%;
+      padding-right: 2rem;
+      opacity: 0;
+      transform: translateX(-30px);
+      animation: fadeInLeft 1.2s ease forwards;
+    }
+
+    .content-right {
+      flex: 2 1 60%;
+      opacity: 0;
+      transform: translateX(30px);
+      animation: fadeInRight 1.2s ease forwards;
+    }
+
+    .content-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .content-right p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: var(--dark);
+      color: var(--light);
+      padding: 2rem 5%;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-column h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--secondary);
+    }
+
+    .footer-column a {
+      color: var(--light);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.8rem;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      opacity: 1;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follow"></div>
+  <div class="progress-bar"></div>
+
+  <nav>
+    <a href="/" class="logo">Ann.Shia</a>
+    <div class="nav-links">
+      <a href="#content">Content</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="content">
+    <h1 class="section-heading">About My Work</h1>
+
+    <div class="content-section">
+      <div class="content-left">
+        <img src="./images/about.webp" alt="Work Image" class="content-image">
+      </div>
+      <div class="content-right">
+        <p>As a UX designer, my focus is on crafting digital experiences that seamlessly blend functionality with visual appeal. My projects are designed to address real-world challenges by creating intuitive interfaces that enhance both user satisfaction and business outcomes. Whether it's designing a responsive website, improving accessibility for a broader audience, or reimagining the user journey for a mobile app, I strive to deliver solutions that leave a lasting impact.</p>
+
+<p>My design philosophy is deeply rooted in understanding the user's needs. Through comprehensive user research, I uncover insights that guide the creative process and ensure every design decision is purposeful. I specialize in translating complex ideas into simple, elegant solutions that resonate with users and drive engagement. By integrating feedback at every stage, I ensure that the end product not only meets but exceeds expectations.</p>
+
+<p>With a strong foundation in prototyping, wireframing, and user testing, I aim to create interfaces that are not only functional but also delightful to interact with. I’m passionate about responsive design, ensuring that my projects look and perform beautifully on all devices. From brainstorming innovative ideas to delivering polished designs, I bring creativity, strategy, and a user-first mindset to every project.</p>
+
+<p>Take a look at my portfolio to explore how these principles come to life across various projects. Whether it's a sleek e-commerce platform, a user-friendly educational app, or a comprehensive design system, each project reflects my dedication to excellence and my passion for creating meaningful digital experiences.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>About Me</h4>
+        <p>I'm a UX designer passionate about creating meaningful, user-centered digital experiences that make an impact.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Email</a>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="#content">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const cursor = document.querySelector('.cursor');
+    const cursorFollow = document.querySelector('.cursor-follow');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+      cursorFollow.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+    });
+
+    const progressBar = document.querySelector('.progress-bar');
+    window.addEventListener('scroll', () => {
+      const scroll = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scroll / maxScroll) * 100;
+      progressBar.style.width = `${progress}%`;
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

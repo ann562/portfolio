@@ -21,8 +21,8 @@ app.get('/', (req, res) => {
   res.render('index', { title: 'Home' });
 });
 
-app.get('/git', (req, res) => {
-  res.render('git', { title: 'Git' });
+app.get('/about', (req, res) => {
+  res.render('about', { title: 'about me' });
 });
 
 app.get('/linux', (req, res) => {

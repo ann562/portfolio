@@ -1,120 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAGE - Home</title>
-    <link rel="stylesheet" href="/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ann.Shia | UX Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary: #FF6B6B;
+      --secondary: #4ECDC4;
+      --dark: #2D3436;
+      --light: #F8F9FA;
+      --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: none;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .cursor {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      transition: transform 0.2s ease;
+    }
+
+    .cursor-follow {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      transition: transform 0.1s ease;
+    }
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient);
+      transform-origin: 0%;
+      z-index: 1000;
+    }
+
+    nav {
+      padding: 2rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(248, 249, 250, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links a {
+      margin-left: 2rem;
+      font-weight: 500;
+      color: var(--dark);
+      text-decoration: none;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gradient);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    #hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 1.25rem;
+      color: var(--dark);
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .cta-button {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    #work {
+      padding: 8rem 5%;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .project-card.visible {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-image {
+  width: 100%;
+  height: 200px;
+  background-image: url('/images/cake.png'); /* Replace with the actual image path */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+.project-image2 {
+  width: 100%;
+  height: 200px;
+  background-image: url('/images/home.png'); /* Replace with the actual image path */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+.project-image3 {
+  width: 100%;
+  height: 200px;
+  background-image: url('/images/git.png'); /* Replace with the actual image path */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+
+    .project-content {
+      padding: 2rem;
+    }
+
+    .project-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      background: var(--dark);
+      color: var(--light);
+      padding: 4rem 5%;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-column h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--secondary);
+    }
+
+    .footer-column a {
+      color: var(--light);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.8rem;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+
+      nav {
+        padding: 1.5rem 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="logo">
-            <a href="/">
-                <img src="/images/Sagelogo.png" alt="SAGE Logo">
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="/">HOME</a></li>
-            <li><a href="/git">GIT</a></li>
-            <li><a href="/linux">LINUX</a></li>
-            <li><a href="/webtech">WEB TECHNOLOGIES</a></li>
-            <li><a href="/tips">TIPS</a></li>
-        </ul>
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
+  <div class="cursor"></div>
+  <div class="cursor-follow"></div>
+  <div class="progress-bar"></div>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-text">
-            <h1>Welcome to SAGE</h1>
-            <p>Your ultimate guide to mastering Git, Linux, Web Technologies, and more.</p>
-            <a href="#resources" class="btn-primary">Explore Resources</a>
-        </div>
-    </section>
+  <nav>
+    <a href="#" class="logo">Ann.Shia</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="/about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-    <!-- Main Content Section -->
-    <section class="content-section">
-        <div class="z-pattern">
-            <div class="section-one">
-                <h1>Learn Git</h1>
-                <p>Master version control with our comprehensive Git tutorials. Understand the history, commands, and workflows to streamline your development process.</p>
-                <a href="/git" class="btn-primary">Explore Git</a>
-            </div>
-            <div class="section-three">
-                <h2>Why Linux?</h2>
-                <p>Discover why Linux powers the majority of servers, supercomputers, and development environments. Learn to navigate and operate like a pro.</p>
-                <a href="/linux" class="btn-primary">Learn Linux</a>
-            </div>
-        </div>
-    </section>
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Crafting Digital Experiences That Inspire</h1>
+      <p>Hi, I'm Ann — a UX designer passionate about creating intuitive, user-centered digital solutions that drive meaningful engagement.</p>
+      <a href="#work" class="cta-button">Explore My Work</a>
+    </div>
+  </section>
 
-    <section class="testimonials">
-        <h2>What People Say</h2>
-        <div class="testimonials-container">
-            <div class="testimonial-item">
-                <img src="/images/person1.png" alt="User 1" class="testimonial-pfp">
-                <p class="testimonial-quote">"SAGE has been a game-changer in my learning journey!"</p>
-                <p class="testimonial-name">- Jane Doe</p>
-            </div>
-            <div class="testimonial-item">
-                <img src="/images/person3.png" alt="User 2" class="testimonial-pfp">
-                <p class="testimonial-quote">"The resources and tutorials are easy to follow and incredibly helpful."</p>
-                <p class="testimonial-name">- John Smith</p>
-            </div>
-            <div class="testimonial-item">
-                <img src="/images/person2.png" alt="User 3" class="testimonial-pfp">
-                <p class="testimonial-quote">"I gained confidence in Git and Linux thanks to SAGE. Awesome website useful"</p>
-                <p class="testimonial-name">- Alice Brown</p>
-            </div>
+  <section id="work">
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image"></div>
+        <div class="project-content">
+          <h3>Business Website</h3>
+          <p>Designed and developed a fully responsive bakery website to enhance online presence and attract new customers. The website features an intuitive navigation system, a visually appealing design inspired by the brand's aesthetics, and integrated functionality for showcasing products, promotions, and customer testimonials. The project focused on creating a seamless user experience that drives engagement and increases sales.<a href="https://ann562.github.io/business-website/" target="_blank">Check it out here</a></p>
+          
         </div>
-    </section>
+      </div>
+      <div class="project-card">
+        <div class="project-image2"></div>
+        <div class="project-content">
+          <h3>Survival Study Guide Website</h3>
+          <p>My very first web project—a survival study guide website designed to help students prepare for exams effectively. The site included organized sections for study tips, subject-specific resources, and interactive features like quizzes to test knowledge retention. This project taught me the fundamentals of web design, including layout structuring, responsive design, and user-centered functionality, setting the foundation for my journey into web development.<a href="https://ann562.github.io/Test/index.html" target="_blank">Check it out here</a></p>
+          
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image3"></div>
+        <div class="project-content">
+          <h3>GitHub</h3>
+          <p>Explore my GitHub to discover the projects I’ve worked on, showcasing my journey as a developer and designer. You’ll find repositories featuring responsive websites, interactive user experiences, and collaborative projects. Each repository includes detailed documentation, allowing you to dive into the code and understand the thought process behind each project. <a href="https://github.com/ann562" target="_blank">Check it out here</a>.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>About Me</h4>
+        <p>I'm a UX designer with a passion for crafting digital solutions that blend creativity and functionality.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Email</a>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="#work">My Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Custom cursor
+    const cursor = document.querySelector('.cursor');
+    const cursorFollow = document.querySelector('.cursor-follow');
     
-    <!-- Resources Section -->
-    <section id="resources" class="resources">
-        <h2>Downloadable Resources</h2>
-        <ul class="resource-list">
-            <li><a href="/downloads/git-cheat-sheet.pdf" download>Git Cheat Sheet</a></li>
-            <li><a href="/downloads/linux-commands-guide.pdf" download>Linux Commands Guide</a></li>
-            <li><a href="/downloads/web-techniques.pdf" download>Web Techniques</a></li>
-            <li><a href="/downloads/productivity-tips.pdf" download>Productivity Tips</a></li>
-        </ul>
-    </section>
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+      cursorFollow.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+    });
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-links">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/git">Git</a></li>
-                <li><a href="/linux">Linux</a></li>
-                <li><a href="/webtech">Web Technologies</a></li>
-                <li><a href="/tips">Tips</a></li>
-            </ul>
-        </div>
-        <div class="footer-copy">
-            <p>&copy; 2024 SAGE. All Rights Reserved.</p>
-            <p><a href="/privacy-policy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
-        </div>
-    </footer>
+    // Progress bar
+    const progressBar = document.querySelector('.progress-bar');
+    
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrolled / maxScroll) * 100;
+      progressBar.style.transform = `scaleX(${scrollPercent / 100})`;
+    });
 
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const hamburger = document.querySelector(".hamburger");
-            const navLinks = document.querySelector(".nav-links");
+    // Project cards animation
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
 
-            hamburger.addEventListener("click", () => {
-                navLinks.classList.toggle("active");
-                hamburger.classList.toggle("active");
-            });
-        });
-    </script>
+    projectCards.forEach(card => observer.observe(card));
+
+    // Hover effects
+    document.querySelectorAll('a, button').forEach(element => {
+      element.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'scale(1.5)';
+        cursorFollow.style.transform = 'scale(1.5)';
+      });
+
+      element.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'scale(1)';
+        cursorFollow.style.transform = 'scale(1)';
+      });
+    });
+  </script>
 </body>
 </html>
-
-
