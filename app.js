@@ -25,8 +25,8 @@ app.get('/about', (req, res) => {
   res.render('about', { title: 'about me' });
 });
 
-app.get('/linux', (req, res) => {
-  res.render('linux', { title: 'Linux' });
+app.get('/contact', (req, res) => {
+  res.render('contact', { title: 'contact' });
 });
 
 app.get('/tips', (req, res) => {
